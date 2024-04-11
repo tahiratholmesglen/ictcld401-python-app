@@ -8,6 +8,8 @@ Note this app must be running on an AWS EC2 server; optionally an S3 bucket can 
 ## Getting Started
 
 ### Host the application
+Create an AWS EC2 instance with Amazon Linux 2023 AMI. Then download all the codes to a folder, e.g. /home/ec2-user/python-app. File "app.py" is the entry point of this web site.
+
 To run the app, you must have Python 3.x and the pip library installed on your system. Run the following commands to install all required python dependencies:
 
 ```bash
@@ -89,6 +91,7 @@ mv ictcld401-python-app-main python-app
 
 # Uncomment and modify the configuration file with correct values
 cd /home/ec2-user/python-app
+# python3 setup.py --section Server --field port --value <default is 8080>
 # python3 setup.py --section Static --field base_url --value <base url string>
 # python3 setup.py --section Database --field endpoint --value <endpoint string>
 # python3 setup.py --section Database --field port --value <default is 3306>

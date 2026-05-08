@@ -14,11 +14,9 @@ To run the app, you must have Python 3.x and the pip library installed on your s
 
 ```bash
 sudo yum update -y
-sudo yum install -y python3
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo python3 get-pip.py
-sudo pip3 install flask
-sudo pip3 install mysql-connector-python
+sudo yum install -y python3 python3-pip unzip wget
+sudo pip3 install --upgrade pip
+sudo pip3 install flask mysql-connector-python
 ```
 
 After the dependencies are installed, start the app using the following command:
@@ -79,11 +77,9 @@ Note: you must uncomment and modify the **python3 setup.py** statements below
 ```bash
 #!/bin/bash
 sudo yum update -y
-sudo yum install -y python3
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo python3 get-pip.py
-sudo pip3 install flask
-sudo pip3 install mysql-connector-python
+sudo yum install -y python3 python3-pip unzip wget
+sudo pip3 install --upgrade pip
+sudo pip3 install flask mysql-connector-python
 cd /home/ec2-user/
 wget --output-document=python-app.zip https://github.com/qiaoli116/ictcld401-python-app/archive/refs/heads/main.zip
 unzip python-app.zip
